@@ -31,8 +31,14 @@ namespace Orders.Forms
             ResourceTypeHelper hlp = new ResourceTypeHelper();
             Result<ResourceType> res = new Result<ResourceType>();
             resourceType.Name = NameText.Text;
+            resourceType.Code = CodeText.Text;
             res = hlp.Create(resourceType);
 
          }
+
+        private void CanceBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
