@@ -20,6 +20,11 @@ namespace Orders
             InitializeComponent();
         }
 
+        private void frm_main_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
 
@@ -41,11 +46,6 @@ namespace Orders
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frm_main_Load(object sender, EventArgs e)
         {
 
         }
@@ -74,6 +74,8 @@ namespace Orders
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var frm_user = new Frm_User();
+            frm_user.Show();
 
         }
     }

@@ -47,7 +47,7 @@
             this.CanceBtn.Location = new System.Drawing.Point(269, 149);
             this.CanceBtn.Name = "CanceBtn";
             this.CanceBtn.Size = new System.Drawing.Size(75, 23);
-            this.CanceBtn.TabIndex = 20;
+            this.CanceBtn.TabIndex = 8;
             this.CanceBtn.Text = "Cancelar";
             this.CanceBtn.UseVisualStyleBackColor = true;
             this.CanceBtn.Click += new System.EventHandler(this.CanceBtn_Click);
@@ -67,14 +67,14 @@
             this.UserNameText.Location = new System.Drawing.Point(88, 38);
             this.UserNameText.Name = "UserNameText";
             this.UserNameText.Size = new System.Drawing.Size(351, 20);
-            this.UserNameText.TabIndex = 18;
+            this.UserNameText.TabIndex = 2;
             // 
             // SaveBtn
             // 
             this.SaveBtn.Location = new System.Drawing.Point(364, 149);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 23);
-            this.SaveBtn.TabIndex = 17;
+            this.SaveBtn.TabIndex = 7;
             this.SaveBtn.Text = "Guardar";
             this.SaveBtn.UseVisualStyleBackColor = true;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
@@ -94,7 +94,7 @@
             this.NameText.Location = new System.Drawing.Point(88, 12);
             this.NameText.Name = "NameText";
             this.NameText.Size = new System.Drawing.Size(351, 20);
-            this.NameText.TabIndex = 15;
+            this.NameText.TabIndex = 1;
             // 
             // label3
             // 
@@ -112,7 +112,7 @@
             this.PasswordText.Name = "PasswordText";
             this.PasswordText.PasswordChar = '*';
             this.PasswordText.Size = new System.Drawing.Size(351, 20);
-            this.PasswordText.TabIndex = 21;
+            this.PasswordText.TabIndex = 4;
             this.PasswordText.UseSystemPasswordChar = true;
             // 
             // EmailText
@@ -120,7 +120,7 @@
             this.EmailText.Location = new System.Drawing.Point(88, 67);
             this.EmailText.Name = "EmailText";
             this.EmailText.Size = new System.Drawing.Size(351, 20);
-            this.EmailText.TabIndex = 23;
+            this.EmailText.TabIndex = 3;
             // 
             // label4
             // 
@@ -138,7 +138,7 @@
             this.ChangePasswordChk.Location = new System.Drawing.Point(88, 119);
             this.ChangePasswordChk.Name = "ChangePasswordChk";
             this.ChangePasswordChk.Size = new System.Drawing.Size(110, 17);
-            this.ChangePasswordChk.TabIndex = 25;
+            this.ChangePasswordChk.TabIndex = 5;
             this.ChangePasswordChk.Text = "Cambiar Contraña";
             this.ChangePasswordChk.UseVisualStyleBackColor = true;
             // 
@@ -148,7 +148,7 @@
             this.ActiveChk.Location = new System.Drawing.Point(221, 119);
             this.ActiveChk.Name = "ActiveChk";
             this.ActiveChk.Size = new System.Drawing.Size(56, 17);
-            this.ActiveChk.TabIndex = 26;
+            this.ActiveChk.TabIndex = 6;
             this.ActiveChk.Text = "Active";
             this.ActiveChk.UseVisualStyleBackColor = true;
             // 

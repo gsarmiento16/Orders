@@ -35,10 +35,37 @@ namespace Orders.Forms
             Result res = hlp.Create(
                 new User {
                     UserName = UserNameText.Text,
+                    Email = EmailText.Text,
                     Name = NameText.Text,
                     Password = PasswordText.Text,
-                    
+                    ChangePassword = true,
+                    Active = true
                 });
+
+            if (res.type == ResultType.SUCCESS)
+            {
+                ClearForm();
+                var msg = MessageBox.Show("Se guardaron los datos exitosamente.", "Compañia - Grupo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+              }
+            else
+            {
+                var msg = MessageBox.Show(res.message, "Compañia - Grupo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
+
+
+        private void ClearForm()
+        {
+            UserNameText.Clear();
+            EmailText.Clear();
+            NameText.Clear();
+            PasswordText.Clear();
+            ChangePasswordChk.Checked = false;
+            ActiveChk.Checked = false;
         }
 
        

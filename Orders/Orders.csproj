@@ -44,7 +44,8 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="OrdersMigration">
+    <Reference Include="OrdersMigration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\OrdersMigration\OrdersMigration\obj\Debug\OrdersMigration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -79,6 +80,12 @@
     <Compile Include="Forms\Frm_CompanyMaster_Edit.Designer.cs">
       <DependentUpon>Frm_CompanyMaster_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Password.Designer.cs">
+      <DependentUpon>Frm_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_ResourceType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +97,12 @@
     </Compile>
     <Compile Include="Forms\Frm_ResourceType_Edit.Designer.cs">
       <DependentUpon>Frm_ResourceType_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_User.Designer.cs">
+      <DependentUpon>Frm_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Frm_User_Edit.cs">
       <SubType>Form</SubType>
@@ -115,6 +128,7 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="General\ControlExtension.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_CompanyMaster.resx">
@@ -123,11 +137,17 @@
     <EmbeddedResource Include="Forms\Frm_CompanyMaster_Edit.resx">
       <DependentUpon>Frm_CompanyMaster_Edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Password.resx">
+      <DependentUpon>Frm_Password.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_ResourceType.resx">
       <DependentUpon>Frm_ResourceType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_ResourceType_Edit.resx">
       <DependentUpon>Frm_ResourceType_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_User.resx">
+      <DependentUpon>Frm_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_User_Edit.resx">
       <DependentUpon>Frm_User_Edit.cs</DependentUpon>
@@ -170,6 +190,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\addIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
