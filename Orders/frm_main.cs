@@ -65,5 +65,16 @@ namespace Orders
             var frm_RT = new Frm_ResourceType();
             frm_RT.Show();
         }
+
+        private void grupoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm_CM = new Frm_CompanyMaster();
+            frm_CM.Show();
+        }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

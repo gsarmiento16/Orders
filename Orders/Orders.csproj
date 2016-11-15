@@ -67,6 +67,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_CompanyMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyMaster.Designer.cs">
+      <DependentUpon>Frm_CompanyMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyMaster_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_CompanyMaster_Edit.Designer.cs">
+      <DependentUpon>Frm_CompanyMaster_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Frm_ResourceType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
     </Compile>
     <Compile Include="Forms\Frm_ResourceType_Edit.Designer.cs">
       <DependentUpon>Frm_ResourceType_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_User_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_User_Edit.Designer.cs">
+      <DependentUpon>Frm_User_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Cliente.cs">
       <SubType>Form</SubType>
@@ -99,11 +117,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Frm_CompanyMaster.resx">
+      <DependentUpon>Frm_CompanyMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_CompanyMaster_Edit.resx">
+      <DependentUpon>Frm_CompanyMaster_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_ResourceType.resx">
       <DependentUpon>Frm_ResourceType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_ResourceType_Edit.resx">
       <DependentUpon>Frm_ResourceType_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_User_Edit.resx">
+      <DependentUpon>Frm_User_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cliente.resx">
       <DependentUpon>Frm_Cliente.cs</DependentUpon>
@@ -122,6 +149,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -139,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
