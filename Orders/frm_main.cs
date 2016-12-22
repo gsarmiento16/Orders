@@ -22,7 +22,10 @@ namespace Orders
 
         private void frm_main_Load(object sender, EventArgs e)
         {
-
+            if(Sesion.UserName!= string.Empty)
+            {
+                UserLbl.Text = Sesion.UserName;
+            }
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)

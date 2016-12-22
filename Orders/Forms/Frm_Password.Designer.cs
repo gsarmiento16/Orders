@@ -30,8 +30,8 @@
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserNameTxt = new System.Windows.Forms.TextBox();
+            this.PasswordTxt = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -43,7 +43,7 @@
             this.pictureBox2.Image = global::Orders.Properties.Resources.passwordIcon;
             this.pictureBox2.Location = new System.Drawing.Point(12, 80);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 41);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -56,21 +56,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // UserNameTxt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(68, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 38);
-            this.textBox1.TabIndex = 2;
+            this.UserNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameTxt.Location = new System.Drawing.Point(68, 24);
+            this.UserNameTxt.Name = "UserNameTxt";
+            this.UserNameTxt.Size = new System.Drawing.Size(308, 38);
+            this.UserNameTxt.TabIndex = 2;
             // 
-            // textBox2
+            // PasswordTxt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(68, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 38);
-            this.textBox2.TabIndex = 3;
+            this.PasswordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTxt.Location = new System.Drawing.Point(68, 83);
+            this.PasswordTxt.Name = "PasswordTxt";
+            this.PasswordTxt.PasswordChar = '*';
+            this.PasswordTxt.Size = new System.Drawing.Size(308, 38);
+            this.PasswordTxt.TabIndex = 3;
+            this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
             // 
             // LoginBtn
             // 
@@ -81,6 +83,7 @@
             this.LoginBtn.TabIndex = 4;
             this.LoginBtn.Text = "Entrar";
             this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // CancelBtn
             // 
@@ -91,6 +94,7 @@
             this.CancelBtn.TabIndex = 5;
             this.CancelBtn.Text = "Cancelar";
             this.CancelBtn.UseVisualStyleBackColor = true;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // Frm_Password
             // 
@@ -99,13 +103,13 @@
             this.ClientSize = new System.Drawing.Size(388, 193);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PasswordTxt);
+            this.Controls.Add(this.UserNameTxt);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Frm_Password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Password";
+            this.Text = "Entrar - Orders";
             this.Load += new System.EventHandler(this.Frm_Password_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -118,8 +122,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserNameTxt;
+        private System.Windows.Forms.TextBox PasswordTxt;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Button CancelBtn;
     }

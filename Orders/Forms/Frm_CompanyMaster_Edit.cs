@@ -35,7 +35,7 @@ namespace Orders.Forms
             {
                 ClearForm();
                 var msg = MessageBox.Show("Se guardaron los datos exitosamente.","Compañia - Grupo", MessageBoxButtons.OK,MessageBoxIcon.Information);
-
+                this.Dispose();
             }
             else
             {
