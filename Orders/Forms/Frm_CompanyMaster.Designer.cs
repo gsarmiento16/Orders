@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.grid = new System.Windows.Forms.DataGridView();
+            this.NewBtn = new System.Windows.Forms.ToolStripButton();
+            this.DeleteBtn = new System.Windows.Forms.ToolStripButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.grid = new Orders.General.CustomDataGridView();
             this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Ext_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ext_id = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActualizadoEn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActualizadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NewBtn = new System.Windows.Forms.ToolStripButton();
-            this.DeleteBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
@@ -55,9 +57,28 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // NewBtn
+            // 
+            this.NewBtn.Image = global::Orders.Properties.Resources.addIcon;
+            this.NewBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.NewBtn.Name = "NewBtn";
+            this.NewBtn.Size = new System.Drawing.Size(62, 22);
+            this.NewBtn.Text = "Nuevo";
+            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Image = global::Orders.Properties.Resources.close_delete_128;
+            this.DeleteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(70, 22);
+            this.DeleteBtn.Text = "Eliminar";
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
             // grid
             // 
-            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -88,6 +109,8 @@
             this.Ext_id.DataPropertyName = "Ext_Id";
             this.Ext_id.HeaderText = "Id";
             this.Ext_id.Name = "Ext_id";
+            this.Ext_id.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Ext_id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Codigo
             // 
@@ -131,29 +154,11 @@
             this.ActualizadoPor.HeaderText = "Actualizado por";
             this.ActualizadoPor.Name = "ActualizadoPor";
             // 
-            // NewBtn
-            // 
-            this.NewBtn.Image = global::Orders.Properties.Resources.addIcon;
-            this.NewBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.NewBtn.Name = "NewBtn";
-            this.NewBtn.Size = new System.Drawing.Size(62, 22);
-            this.NewBtn.Text = "Nuevo";
-            this.NewBtn.Click += new System.EventHandler(this.NewBtn_Click);
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.Image = global::Orders.Properties.Resources.close_delete_128;
-            this.DeleteBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(70, 22);
-            this.DeleteBtn.Text = "Eliminar";
-            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
-            // 
             // Frm_CompanyMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 340);
+            this.ClientSize = new System.Drawing.Size(1192, 445);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Frm_CompanyMaster";
@@ -172,15 +177,17 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton NewBtn;
-        private System.Windows.Forms.DataGridView grid;
+        private General.CustomDataGridView grid;
+        private System.Windows.Forms.ToolStripButton DeleteBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn check;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ext_id;
+        private System.Windows.Forms.DataGridViewLinkColumn Ext_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreadoPor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActualizadoEn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActualizadoPor;
-        private System.Windows.Forms.ToolStripButton DeleteBtn;
     }
 }

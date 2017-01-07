@@ -61,7 +61,7 @@
             this.CodeText.Location = new System.Drawing.Point(77, 39);
             this.CodeText.Name = "CodeText";
             this.CodeText.Size = new System.Drawing.Size(215, 20);
-            this.CodeText.TabIndex = 12;
+            this.CodeText.TabIndex = 2;
             // 
             // SaveBtn
             // 
@@ -88,7 +88,7 @@
             this.NameText.Location = new System.Drawing.Point(77, 13);
             this.NameText.Name = "NameText";
             this.NameText.Size = new System.Drawing.Size(215, 20);
-            this.NameText.TabIndex = 9;
+            this.NameText.TabIndex = 1;
             // 
             // Frm_CompanyMaster_Edit
             // 

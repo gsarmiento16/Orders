@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Orders.Forms;
+using Orders.General;
+using OrdersMigration.Util;
 using OrdersMigration.Helpers;
 using OrdersMigration.ViewModels;
 
@@ -22,18 +24,33 @@ namespace Orders.Forms
 
         private void Frm_CompanyMaster_Load(object sender, EventArgs e)
         {
-            grid.CurrentCellDirtyStateChanged += new EventHandler(grid_CurrentCellDirtyStateChanged);
             loadData();
         }
         private void NewBtn_Click(object sender, EventArgs e)
         {
             var frm = new Frm_CompanyMaster_Edit();
-            frm.Show();
+            frm.ShowDialog();
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                loadData();
+            }
         }
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            string ids = getIds(1);
-            Console.WriteLine(ids);
+            List<string> ids = grid.GetCheckedId(1);
+            if (ids.Count() > 0)
+            {
+                DialogResult msg = MessageBox.Show("Desea eliminar el/los registros(s) seleccionado(s)?", "Eliminar", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+                if (msg == DialogResult.Yes)
+                {
+                    CompanyMasterHelper mcHlp = new CompanyMasterHelper();
+                    if (mcHlp.Delete(ids).type == ResultType.SUCCESS)
+                    {
+                        loadData();
+                    }
+                }
+            }
         }
 
         private void loadData()
@@ -45,37 +62,15 @@ namespace Orders.Forms
         }
 
 
-        private string getIds(int ColumnId)
-        {
-            string ids = "";
-            int index = 0;
-            foreach(DataGridViewRow row in grid.Rows)
-            {
-
-                if (Convert.ToBoolean(row.Cells["check"].Value) == true)
-                {
-                    Console.WriteLine(row.Cells[ColumnId].Value);
-                    ids +=(index>=1)? ",'":"'" + row.Cells[ColumnId].Value.ToString()+"'";
-
-                    index++;
-                }
-                 
-            }
-
-            return ids;
-        }
-
-
-        void grid_CurrentCellDirtyStateChanged(object sender, EventArgs e)
-        {
-            if (grid.IsCurrentCellDirty)
-            {
-                grid.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            }
-        }
+     
 
         private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (grid.CurrentCell.ColumnIndex == 1 )
+            {
+                var frm = new Frm_CompanyMaster_Edit();
+                frm.ShowDialog();
+            }
         }
     }
 }

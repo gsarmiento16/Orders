@@ -129,6 +129,10 @@
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
     <Compile Include="General\ControlExtension.cs" />
+    <Compile Include="General\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="General\CustomParams.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Frm_CompanyMaster.resx">
